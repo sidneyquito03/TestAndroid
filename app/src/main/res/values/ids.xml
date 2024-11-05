@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="guideline" type="id" />
+    <item name="subText" type="id" />
+    <item name="fullNameInput" type="id" />
+    <item name="registerTitle" type="id" />
+    <item name="toolbar" type="id" />
+    <item name="google" type="id" />
+    <item name="registerText" type="id" />
+    <item name="googleIcon" type="id" />
+    <item name="googleText" type="id" />
+    <item name="emailInput" type="id" />
+    <item name="loginText" type="id" />
+    <item name="editImageButton" type="id" />
+</resources>

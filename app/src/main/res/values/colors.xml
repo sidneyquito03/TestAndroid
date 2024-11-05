@@ -1,0 +1,13 @@
+<resources>
+    <color name="my_light_primary">#FF6200EE</color> <!-- Ejemplo de color -->
+    <color name="my_dark_primary">#FF3700B3</color> <!-- Ejemplo de color -->
+    <color name="my_accent_color">#FF03DAC5</color> <!-- Ejemplo de color -->
+
+
+        <color name="blue">#04B2D9</color>
+        <color name="gray">#A1A1A1</color>
+    <color name="teal_200">#FF03DAC5</color>
+
+
+</resources>
+

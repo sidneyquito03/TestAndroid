@@ -1,0 +1,195 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Flecha de regreso -->
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="37dp"
+            android:layout_height="43dp"
+            android:layout_margin="16dp"
+            android:contentDescription="Flecha de retroceso"
+            android:src="@drawable/btn_retroceso" />
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:padding="16dp"
+            android:text="PREGUNTAS FRECUENTES:"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Pregunta 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="#FFFFFF"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="¿Hay becas que Tecsup tenga o becas con las que pueda aplicar?"
+                android:textColor="#17D4FF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:text="Sí, hay becas que Tecsup da a los estudiantes que estén en el primer puesto de cada carrera y ciclo correspondiente. También hay becas que Tecsup da con las que puedes aplicar, como la BECA 18, BECA BCP y a veces tenemos colaboraciones con la BECA PERÚ. También hay becas especiales para las mujeres que deseen estudiar aeronáutica, etc. ¡Te invitamos a revisar la página oficial de TECSUP para más información!"
+                android:textColor="#433C3C"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Pregunta 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="#FFFFFF"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="¿Qué tipo de certificaciones y acreditaciones internacionales tiene Tecsup para garantizar la calidad de sus programas académicos?"
+                android:textColor="#17D4FF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:text="Tecsup cuenta con certificaciones y acreditaciones internacionales como:\n\n- Acreditación del Consejo de Educación Superior del Perú (CONEAU).\n- Certificación ISO 9001:2015 para la gestión de la calidad.\n- Acreditación internacional de la Agencia para la Calidad y Acreditación en Ciencias, Tecnología, Ingeniería y Matemáticas (ABET).\n- Reconocimiento de la Asociación Internacional de Universidades (IAU).\n- Convenios con universidades internacionales para intercambios académicos y investigación.\n\nEstas certificaciones y acreditaciones garantizan la calidad y estándares internacionales de los programas académicos ofrecidos por Tecsup."
+                android:textColor="#433C3C"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Pregunta 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="#FFFFFF"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="¿Cuál es el proceso de admisión para ingresar a Tecsup?"
+                android:textColor="#17D4FF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:text="Requisitos:\n- Copia del DNI\n- Certificado de estudios secundarios\n- Foto tamaño carné\n\nProceso:\n1. Inscripción en línea o en sede\n2. Evaluación académica\n3. Entrevista personal\n4. Resultado de admisión"
+                android:textColor="#433C3C"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Pregunta 4 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="#FFFFFF"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="¿Qué tipo de financiamiento y becas ofrece Tecsup a sus estudiantes?"
+                android:textColor="#17D4FF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:text="- Becas académicas (meritocráticas)\n- Becas de responsabilidad social\n- Crédito educativo con entidades financieras asociadas\n- Descuentos por pago anticipado"
+                android:textColor="#433C3C"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Pregunta 5 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="#FFFFFF"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="¿Qué servicios de apoyo ofrece Tecsup a sus estudiantes?"
+                android:textColor="#17D4FF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:text="Tecsup ofrece diversos servicios con la finalidad de que el estudiante pueda sentirse en confianza dentro de su casa de estudios, y estos son algunos de los servicios que brinda:\n- Orientación académica y profesional\n- Asesoramiento en empleo y prácticas\n- Servicios de salud mental y bienestar\n- Biblioteca y recursos digitales\n- Actividades extracurriculares"
+                android:textColor="#433C3C"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Pregunta 6 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="#FFFFFF"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="¿Cuáles son las oportunidades de empleo y prácticas profesionales que ofrece Tecsup a sus estudiantes?"
+                android:textColor="#17D4FF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:text="- Convenios con empresas líderes en el sector\n- Programas de prácticas remuneradas\n- Ferias de empleo y networking\n- Asesoramiento en creación de empresas"
+                android:textColor="#433C3C"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

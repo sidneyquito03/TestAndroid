@@ -1,0 +1,10 @@
+<resources>
+    <string name="orientatec_text">ORIENTATEC</string>
+    <string name="boton_iniciemos">Iniciemos</string>
+    <string name="iniciar_sesion">INICIAR SESIÓN</string>
+    <string name="boton_registrar">REGISTRAR</string>
+    <string name="boton_ingresar">INGRESAR</string>
+    <string name="app_id">tu_app_id</string>
+    <string name="navigation_drawer_open" />
+    <string name="navigation_drawer_close" />
+</resources>

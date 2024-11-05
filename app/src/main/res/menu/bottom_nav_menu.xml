@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/test"
+        android:title="Simulacro" />
+    <item
+        android:id="@+id/ubicacion"
+        android:icon="@drawable/ubicacion"
+        android:title="ubicacion" />
+    <item
+        android:id="@+id/inicio"
+        android:icon="@drawable/inicio"
+        android:title="inicio" />
+    <item
+        android:id="@+id/test"
+        android:icon="@drawable/simulacro"
+        android:title="test" />
+
+    <item
+        android:id="@+id/chatbox"
+        android:icon="@drawable/chatbox"
+        android:title="chatbox" />
+
+
+</menu>

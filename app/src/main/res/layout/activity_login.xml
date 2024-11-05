@@ -1,0 +1,221 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistroActivity">
+
+    <View
+        android:id="@+id/topGradient"
+        android:layout_width="468dp"
+        android:layout_height="136dp"
+        android:background="@drawable/gradient_vistas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.17"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/middleSection"
+        android:layout_width="367dp"
+        android:layout_height="443dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp"
+        android:padding="@dimen/padding"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/loginButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.578"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        tools:ignore="DuplicateIds">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="424dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- Título -->
+            <TextView
+                android:id="@+id/registerTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:gravity="center"
+                android:text="INICIAR TU SESION"
+                android:textColor="#04B2D9"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+            <!-- Icono de usuario y campo de texto: Nombre completo -->
+            <LinearLayout
+                android:layout_width="327dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/userIcon"
+                    android:layout_width="56dp"
+                    android:layout_height="29dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="User Icon"
+                    android:src="@drawable/nombre" />
+
+                <EditText
+                    android:id="@+id/emailInput"
+                    android:layout_width="288dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@android:color/darker_gray"
+                    android:hint="EMAIL"
+                    android:inputType="textPersonName"
+                    android:textColorHint="@color/gray"
+                    android:textStyle="italic"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </LinearLayout>
+
+            <!-- Icono de seguridad y campo de texto: Contraseña -->
+            <LinearLayout
+                android:layout_width="338dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/passwordIcon"
+                    android:layout_width="52dp"
+                    android:layout_height="29dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="Password Icon"
+                    android:src="@drawable/segurity" />
+
+                <EditText
+                    android:id="@+id/passwordInput"
+                    android:layout_width="229dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@android:color/darker_gray"
+                    android:hint="CONTRASEÑA"
+                    android:inputType="textPassword"
+                    android:minHeight="48dp"
+                    android:textColorHint="@color/gray"
+                    android:textStyle="italic" />
+
+                <ImageView
+                    android:id="@+id/eyeIcon"
+                    android:layout_width="42dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="10dp"
+                    android:clickable="true"
+                    android:contentDescription="Show/Hide Password"
+                    android:focusable="true"
+                    android:padding="8dp"
+                    android:src="@drawable/ojo"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </LinearLayout>
+
+            <!-- Botón de Google -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/middleSectionGoogle"
+                android:layout_width="306dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="26dp"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:id="@+id/google"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/form_background"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/googleIcon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="Google Icon"
+                        android:src="@drawable/googlelogo" />
+
+                    <TextView
+                        android:id="@+id/googleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        android:text="o ingresa desde Google"
+                        android:textColor="#888888"
+                        android:textSize="17sp"
+                        android:textStyle="italic" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/registerText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:minHeight="49dp"
+                android:padding="10dp"
+                android:text="¿No tienes una cuenta?, Regístrate "
+                android:textColor="@drawable/selector_text_color"
+                android:textSize="16sp"
+                android:textStyle="bold|italic" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/bottomGradient"
+        android:layout_width="459dp"
+        android:layout_height="162dp"
+        android:background="@drawable/gradient_vistas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.17"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/subText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        android:gravity="center"
+        android:text="¡QUÉ BUENO VERTE DE VUELTA!"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/middleSection" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="232dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/background_button"
+        android:gravity="center"
+        android:text="Iniciar sesion"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/middleSection" />
+</androidx.constraintlayout.widget.ConstraintLayout>

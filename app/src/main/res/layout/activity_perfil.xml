@@ -1,0 +1,304 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+
+
+    <!-- Flecha de regreso -->
+    <ImageView
+        android:id="@+id/backArrow"
+        android:layout_width="37dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Flecha de retroceso"
+        android:src="@drawable/btn_retroceso" />
+
+    <!-- Contenedor de imagen de perfil y botón de cambio -->
+    <RelativeLayout
+        android:id="@+id/profileContainer"
+        android:layout_width="169dp"
+        android:layout_height="163dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="Imagen de perfil"
+            android:scaleType="fitCenter"
+        android:src="@drawable/perfilajustes" />
+
+        <ImageButton
+            android:id="@+id/changeProfileImageButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:backgroundTint="#FFFFFF"
+            android:contentDescription="Cambiar imagen de perfil"
+            android:scaleType="centerCrop"
+            android:src="@drawable/cambiarimg" />
+    </RelativeLayout>
+
+
+
+    <!-- Formulario centrado y ajustado -->
+    <LinearLayout
+        android:layout_width="377dp"
+        android:layout_height="529dp"
+        android:layout_below="@id/profileContainer"
+        android:layout_marginTop="42dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <!-- Título -->
+        <View
+            android:layout_width="275dp"
+            android:layout_height="7dp"
+            android:layout_marginTop="15dp"
+            android:background="#FFFFFF" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="DATOS DE TU CUENTA:"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical">
+
+            <!-- Encabezado USUARIO-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginBottom="4dp"
+                android:text="USUARIO:"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <!-- Campo de Usuario -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:boxBackgroundMode="none"
+                    app:hintEnabled="false">
+
+                    <EditText
+                        android:id="@+id/nombre_completo"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/edit_text_border"
+                        android:hint="Daniel Aguilar Samón Rojas"
+                        android:inputType="text"
+                        android:padding="12dp"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Ícono de edición -->
+                <ImageButton
+                    android:id="@+id/editUserIconButton"
+                    android:layout_width="52dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:background="@null"
+                    android:contentDescription="Editar"
+                    android:padding="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/editusuario" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical">
+
+            <!-- Encabezado EMAIL-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginBottom="4dp"
+                android:text="EMAIL:"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <!-- Contenedor Horizontal para Campo de Email y Ícono -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Campo de Email -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:boxBackgroundMode="none"
+                    app:hintEnabled="false">
+
+                    <EditText
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/edit_text_border"
+                        android:hint="daniel19@gmail.com"
+                        android:inputType="textEmailAddress"
+                        android:padding="16dp"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageButton
+                    android:id="@+id/editEmailIconButton1"
+                    android:layout_width="57dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:background="@null"
+                    android:contentDescription="Editar"
+                    android:padding="12dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/editusuario" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical">
+
+            <!-- Encabezado "EMAIL" alineado a la izquierda -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginBottom="4dp"
+                android:text="CONTRASEÑA:"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <!-- Contenedor Horizontal para Campo de Email y Íconos -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <!-- Campo de Email -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:boxBackgroundMode="none"
+                    app:hintEnabled="false">
+
+                    <EditText
+                        android:id="@+id/passwordEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/edit_text_border"
+                        android:hint="123456"
+                        android:inputType="textEmailAddress"
+                        android:padding="16dp"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        tools:ignore="DuplicateIds,TextFields" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Ícono de edición -->
+                <ImageButton
+                    android:id="@+id/passwordEditText1"
+                    android:layout_width="53dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:background="@null"
+                    android:contentDescription="Editar"
+                    android:padding="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/editusuario"
+                    tools:ignore="DuplicateIds" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/cancelButton"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="#000000"
+                android:text="Cancelar"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="144dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:background="#000000"
+                android:text="Guardar Cambios"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
+
+        <!-- Botón de Cerrar Sesión -->
+        <View
+            android:layout_width="275dp"
+            android:layout_height="7dp"
+            android:layout_below="@id/profileImage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:background="#FFFFFF" />
+
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="186dp"
+            android:layout_height="49dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:onClick="logout"
+            android:background="@drawable/background_gradient_button"
+            android:text="Cerrar Sesión"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</RelativeLayout>

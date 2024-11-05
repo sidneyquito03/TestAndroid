@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="guideline" type="id" />
+    <item name="subText" type="id" />
+    <item name="fullNameInput" type="id" />
+    <item name="registerTitle" type="id" />
+</resources>

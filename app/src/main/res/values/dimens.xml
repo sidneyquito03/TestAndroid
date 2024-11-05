@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_width">371dp</dimen>
+    <dimen name="card_height">437dp</dimen>
+    <dimen name="padding">30dp</dimen>
+    <dimen name="button_width">232dp</dimen>
+    <dimen name="button_height">52dp</dimen>
+</resources>
