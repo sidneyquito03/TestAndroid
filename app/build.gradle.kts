@@ -50,6 +50,8 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.activity:activity-ktx:1.7.2")
     implementation("androidx.drawerlayout:drawerlayout:1.1.1")
+    implementation("androidx.cardview:cardview:1.0.0")
+    implementation("androidx.recyclerview:recyclerview:1.2.1")
 
     // Google Play services para Maps y autenticación
     implementation("com.google.android.gms:play-services-maps:18.1.0")

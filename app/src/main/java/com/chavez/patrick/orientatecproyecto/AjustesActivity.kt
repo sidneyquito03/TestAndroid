@@ -9,6 +9,8 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.chavez.patrick.orientatecproyecto.databinding.ActivityAjustesBinding
 
+//AGREGAR LÓGICA EN ELIMINAR USUARIO
+
 class AjustesActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAjustesBinding

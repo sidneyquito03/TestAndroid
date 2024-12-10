@@ -6,6 +6,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.net.Uri
 import android.os.Bundle
+import android.text.Editable
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -24,6 +25,10 @@ class PerfilActivity : AppCompatActivity() {
     private lateinit var cancelButton: Button
     private lateinit var logoutButton: Button
     private lateinit var backArrow: ImageView
+    private lateinit var nombreEditButton: ImageButton
+    private lateinit var emailEditButton: ImageButton
+    private lateinit var contraseñaEditButton: ImageButton
+
 
     private lateinit var sharedPreferences: SharedPreferences
     private var profileImageUri: Uri? = null
@@ -43,20 +48,43 @@ class PerfilActivity : AppCompatActivity() {
         cancelButton = findViewById(R.id.cancelButton)
         logoutButton = findViewById(R.id.logoutButton)
         backArrow = findViewById(R.id.backArrow)
+        nombreEditButton = findViewById(R.id.editUserIconButton)
+        emailEditButton = findViewById(R.id.editEmailIconButton1)
+        contraseñaEditButton = findViewById(R.id.passwordEditText1)
 
-        // Obtener valores del Intent
         val nombreCompleto = intent.getStringExtra("nombre_completo")
         val email = intent.getStringExtra("email")
+        val contraseña = intent.getStringExtra("contraseña")
 
-        // Establecer los valores en los EditTexts
-        nombreCompletoEditText.setText(nombreCompleto)
-        emailEditText.setText(email)
+        nombreCompletoEditText.text = (nombreCompleto ?: "Name") as Editable?
+        emailEditText.text = (email ?: "example@gmail.com") as Editable?
+        passwordEditText.text = (contraseña ?: "example123") as Editable?
 
-        // Configura SharedPreferences
         sharedPreferences = getSharedPreferences("UserProfile", MODE_PRIVATE)
 
-        // Cargar datos guardados
         loadProfileData()
+
+        // Inicialmente, los EditTexts están desactivados para edición
+        nombreCompletoEditText.isEnabled = false
+        emailEditText.isEnabled = false
+        passwordEditText.isEnabled = false
+
+        nombreEditButton.setOnClickListener {
+            nombreCompletoEditText.isEnabled = true
+            nombreCompletoEditText.requestFocus()  // Coloca el cursor en el campo para edición
+        }
+
+// Habilita el campo de email cuando se presione el botón de editar
+        emailEditButton.setOnClickListener {
+            emailEditText.isEnabled = true
+            emailEditText.requestFocus()
+        }
+
+// Habilita el campo de contraseña cuando se presione el botón de editar
+        contraseñaEditButton.setOnClickListener {
+            passwordEditText.isEnabled = true
+            passwordEditText.requestFocus()
+        }
 
         // Abrir galería para cambiar foto de perfil
         editImageButton.setOnClickListener {
@@ -65,7 +93,15 @@ class PerfilActivity : AppCompatActivity() {
 
         // Configurar botones de guardar, cancelar y cerrar sesión
         saveButton.setOnClickListener {
-            saveProfileData()
+            val nombreNuevo = nombreCompletoEditText.text.toString()
+            val emailNuevo = emailEditText.text.toString()
+            val contraseñaNueva = passwordEditText.text.toString()
+
+            //ESTO DEBO DE VERLO EN LA API actualizarPerfil(nombreNuevo, emailNuevo, contraseñaNueva)
+
+            nombreCompletoEditText.isEnabled = false
+            emailEditText.isEnabled = false
+            passwordEditText.isEnabled = false
         }
 
         cancelButton.setOnClickListener {
@@ -83,9 +119,8 @@ class PerfilActivity : AppCompatActivity() {
     }
 
     private fun openGalleryForImage() {
-        val intent = Intent(Intent.ACTION_PICK).apply {
-            type = "image/*"
-        }
+        val intent = Intent(Intent.ACTION_PICK)
+        intent.type = "image/*"
         startActivityForResult(intent, REQUEST_IMAGE_PICK)
     }
 
@@ -98,37 +133,31 @@ class PerfilActivity : AppCompatActivity() {
     }
 
     private fun loadProfileData() {
-        val username = sharedPreferences.getString("username", "")
-        val email = sharedPreferences.getString("email", "")
-        val password = sharedPreferences.getString("password", "")
-
-        nombreCompletoEditText.setText(username)
-        emailEditText.setText(email)
-        passwordEditText.setText(password)
-    }
+            nombreCompletoEditText.setText(sharedPreferences.getString("nombre_completo", "Name"))
+            emailEditText.setText(sharedPreferences.getString("email", "example@gmail.com"))
+            passwordEditText.setText(sharedPreferences.getString("contraseña", "example123"))
+        }
 
     private fun saveProfileData() {
         val editor = sharedPreferences.edit()
-        editor.putString("username", nombreCompletoEditText.text.toString())
+        editor.putString("nombre_completo", nombreCompletoEditText.text.toString())
         editor.putString("email", emailEditText.text.toString())
         editor.putString("password", passwordEditText.text.toString())
         editor.apply()
     }
 
     private fun logout() {
-        nombreCompletoEditText.setText(null)
-        emailEditText.setText(null)
-        passwordEditText.setText(null)
-
-        // Regresar al usuario a la pantalla de inicio
-        val goToPerfil = Intent(this, PerfilActivity::class.java)
-        startActivity(goToPerfil)
+        val editor = sharedPreferences.edit()
+        editor.clear()
+        editor.apply()
+        val goToHome = Intent(this, LoginActivity::class.java)
+        startActivity(goToHome)
         finish()
     }
 
     override fun onBackPressed() {
         super.onBackPressed()
-        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right) // Añade animación al volver
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
     }
 
     companion object {

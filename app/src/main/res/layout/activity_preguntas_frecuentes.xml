@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- Flecha de regreso -->
+
         <ImageView
             android:id="@+id/backArrow"
             android:layout_width="37dp"
@@ -18,7 +18,7 @@
             android:contentDescription="Flecha de retroceso"
             android:src="@drawable/btn_retroceso" />
 
-        <!-- Título -->
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

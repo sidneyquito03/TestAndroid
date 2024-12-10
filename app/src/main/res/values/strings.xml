@@ -7,4 +7,7 @@
     <string name="app_id">tu_app_id</string>
     <string name="navigation_drawer_open" />
     <string name="navigation_drawer_close" />
+    <string name="image_desc">Descripción de la imagen</string>
+    <string name="app_name">OrientaTec</string>
+
 </resources>

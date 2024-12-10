@@ -12,4 +12,10 @@
     <item name="emailInput" type="id" />
     <item name="loginText" type="id" />
     <item name="editImageButton" type="id" />
+    <item name="nombre_testimonio" type="id" />
+    <item name="titulo_testimonio" type="id" />
+    <item name="descripcion_testimonio" type="id" />
+    <item name="imagen_testimonio" type="id" />
+    <item name="text_testimonio_title" type="id" />
+    <item name="text_testimonio_description" type="id" />
 </resources>

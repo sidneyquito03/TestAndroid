@@ -1,0 +1,11 @@
+<!-- res/drawable/image_background.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Capa de fondo azul -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+            <corners android:bottomRightRadius="39dp" />
+            <stroke android:width="4dp" android:color="@android:color/holo_blue_dark" />
+        </shape>
+    </item>
+</layer-list>
